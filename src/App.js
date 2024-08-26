@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
+import Navi from './Compo/Navi';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='app-container'>
+        <Routes>
+          <Route path="/" element={<MainApp />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
+function MainApp() {
+  const navigate = useNavigate();
+  
+  return (
+    <div className='flex flex-col w-full h-screen'>
+      <Navi />
+    </div>
+  )
+}
 export default App;
