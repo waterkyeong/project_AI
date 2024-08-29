@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer>
+    <footer className='w-full flex flex-shrink-0 justify-center text-align-center items-center h-20 mt-8 bg-slate-400 text-purple-50 font-mono'>
       ⓒ 2024 SMARTSHIP, All rights reserved.
     </footer>
   );
