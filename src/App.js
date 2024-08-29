@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import Navi from './Compo/Navi';
+import Footer from './Compo/Footer.js';
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function MainApp() {
   
   return (
     <div className='flex flex-col w-full h-screen'>
+      <main>
       <Navi />
+      </main>
+      <Footer/>
     </div>
   )
 }
